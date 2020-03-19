@@ -1,0 +1,143 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 96%;
+}
+
+html, body {
+  padding-right: 1%;
+  padding-left: 1%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans';
+}
+
+html .header, body .header {
+  height: 10%;
+  background: white;
+}
+
+html .header ul, body .header ul {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+html .header ul li, body .header ul li {
+  width: 20%;
+  text-align: center;
+  border: 2px solid rgba(61, 153, 125, 0.53);
+  color: #16382E;
+}
+
+html .header ul li:hover, body .header ul li:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+html .aboutMe, body .aboutMe {
+  height: 90%;
+  background: purple;
+}
+
+html .projects, body .projects {
+  height: 90%;
+  background: yellow;
+}
+
+html .skills, body .skills {
+  height: 90%;
+  background: pink;
+}
+
+html .contact, body .contact {
+  height: 90%;
+  background: grey;
+}
+
+html .contact .links, body .contact .links {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+html .contact .contactForm, body .contact .contactForm {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+html .contact .contactForm #info, body .contact .contactForm #info {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .contact .contactForm #info label, body .contact .contactForm #info label {
+  font-size: larger;
+  text-align: center;
+}
+
+html .contact .contactForm form, body .contact .contactForm form {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .contact .contactForm form #name, body .contact .contactForm form #name {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  padding: 1%;
+}
+
+html .contact .contactForm form #email, body .contact .contactForm form #email {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  padding: 1%;
+}
+
+html .contact .contactForm form #message, body .contact .contactForm form #message {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  padding: 1%;
+  height: 60%;
+  resize: vertical;
+}
+
+html .contact .contactForm form #submit, body .contact .contactForm form #submit {
+  width: 80%;
+  padding: 0.5%;
+}
+/*# sourceMappingURL=style.css.map */
