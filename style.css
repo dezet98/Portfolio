@@ -1,30 +1,26 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 96%;
+  width: 100%;
 }
 
-html, body {
-  padding-right: 1%;
-  padding-left: 1%;
+.container-fluid {
   height: 100%;
-  margin: 0;
   font-family: 'Open Sans';
 }
 
-html .header, body .header {
+.container-fluid .header {
   height: 10%;
   background: white;
+  z-index: 999;
 }
 
-html .header ul, body .header ul {
-  width: 50%;
+.container-fluid .header ul {
   height: 100%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -34,71 +30,47 @@ html .header ul, body .header ul {
   list-style-type: none;
 }
 
-html .header ul li, body .header ul li {
+.container-fluid .header ul li {
   width: 20%;
   text-align: center;
-  border: 2px solid rgba(61, 153, 125, 0.53);
+  border-bottom: 2px solid rgba(61, 153, 125, 0.53);
   color: #16382E;
 }
 
-html .header ul li:hover, body .header ul li:hover {
+.container-fluid .header ul li:hover {
   cursor: pointer;
-  background-color: red;
+  background-color: rgba(61, 153, 125, 0.53);
 }
 
-html .aboutMe, body .aboutMe {
+.container-fluid .aboutMe {
   height: 90%;
-  background: purple;
+  background: plum;
 }
 
-html .projects, body .projects {
+.container-fluid .projects {
   height: 90%;
   background: yellow;
 }
 
-html .skills, body .skills {
+.container-fluid .skills {
   height: 90%;
   background: pink;
 }
 
-html .contact, body .contact {
+.container-fluid .contact {
   height: 90%;
-  background: grey;
+  background: url("images/brickWall.jpg") no-repeat center;
+  background-size: cover;
 }
 
-html .contact .links, body .contact .links {
-  width: 50%;
-  height: 100%;
-  float: left;
+.container-fluid .contact .links {
+  background-color: rgba(250, 250, 250, 0.05);
+  padding: 0;
 }
 
-html .contact .contactForm, body .contact .contactForm {
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-
-html .contact .contactForm #info, body .contact .contactForm #info {
-  height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-html .contact .contactForm #info label, body .contact .contactForm #info label {
-  font-size: larger;
-  text-align: center;
-}
-
-html .contact .contactForm form, body .contact .contactForm form {
+.container-fluid .contact .links .github {
   width: 100%;
-  height: 80%;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,38 +78,200 @@ html .contact .contactForm form, body .contact .contactForm form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-html .contact .contactForm form #name, body .contact .contactForm form #name {
+.container-fluid .contact .links .github h4 {
+  color: #ffffff;
+}
+
+.container-fluid .contact .links .github:hover {
+  background: url("images/L_logo.png") no-repeat center;
+  background-size: cover;
+}
+
+.container-fluid .contact .links .github:hover h4 {
+  display: none;
+}
+
+.container-fluid .contact .links .github:hover {
+  background: url("images/github.png") no-repeat center;
+  background-size: cover;
+}
+
+.container-fluid .contact .links .linkedin {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.container-fluid .contact .links .linkedin h4 {
+  color: #ffffff;
+}
+
+.container-fluid .contact .links .linkedin:hover {
+  background: url("images/L_logo.png") no-repeat center;
+  background-size: cover;
+}
+
+.container-fluid .contact .links .linkedin:hover h4 {
+  display: none;
+}
+
+.container-fluid .contact .links .linkedin:hover {
+  background: url("images/L_logo.png") no-repeat center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid .contact .links {
+    height: 50%;
+  }
+}
+
+.container-fluid .contact .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container-fluid .contact .contactForm #labelContainer {
+  width: 80%;
+}
+
+.container-fluid .contact .contactForm #labelContainer h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.container-fluid .contact .contactForm #name, .container-fluid .contact .contactForm #email {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 80%;
   padding: 1%;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  color: white;
 }
 
-html .contact .contactForm form #email, body .contact .contactForm form #email {
+.container-fluid .contact .contactForm #name::-webkit-input-placeholder, .container-fluid .contact .contactForm #email::-webkit-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #name:-ms-input-placeholder, .container-fluid .contact .contactForm #email:-ms-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #name::-ms-input-placeholder, .container-fluid .contact .contactForm #email::-ms-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #name::placeholder, .container-fluid .contact .contactForm #email::placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #name:focus, .container-fluid .contact .contactForm #email:focus {
+  outline: none;
+}
+
+.container-fluid .contact .contactForm #message {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 80%;
   padding: 1%;
-}
-
-html .contact .contactForm form #message, body .contact .contactForm form #message {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 80%;
-  padding: 1%;
-  height: 60%;
+  border: 0;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  color: white;
+  min-height: 5%;
+  max-height: 50%;
   resize: vertical;
+  overflow: auto;
 }
 
-html .contact .contactForm form #submit, body .contact .contactForm form #submit {
-  width: 80%;
-  padding: 0.5%;
+.container-fluid .contact .contactForm #message::-webkit-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #message:-ms-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #message::-ms-input-placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #message::placeholder {
+  color: rgba(95, 224, 186, 0.53);
+  opacity: 1;
+}
+
+.container-fluid .contact .contactForm #message:focus {
+  outline: none;
+}
+
+.container-fluid .contact .contactForm #send {
+  width: 30%;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.container-fluid .contact .contactForm #send:hover {
+  background: #212529;
+  border: 1px solid #212529;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid .contact .contactForm {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid .contact {
+    height: 180%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

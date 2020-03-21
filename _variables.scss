@@ -1,0 +1,17 @@
+$contentBoxHeight: 90%;
+
+$xs: "only screen and (max-width : 576px)";
+$sm: "only screen and (max-width : 768px)";
+$md: "only screen and (max-width : 992px)";
+
+@mixin contentBox {
+    height: $contentBoxHeight;
+}
+
+@mixin setBackground($path) {
+    background: url($path) no-repeat center; 
+    background-size: cover;
+}
+
+
+

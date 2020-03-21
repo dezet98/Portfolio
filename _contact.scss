@@ -1,0 +1,123 @@
+@import "variables";
+
+@mixin textInput {
+    box-sizing: border-box;
+    width: 80%;
+    padding: 1%;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    color: white;
+
+    &::placeholder {
+        color: rgba(95, 224, 186, 0.53);
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin socialMediaBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+
+    h4 {
+        color: #ffffff; 
+    }
+
+    &:hover {
+        @include setBackground("images/L_logo.png");
+
+        h4 {
+            display: none;
+        }
+    }
+}
+
+.contact {
+    @include contentBox;
+    @include setBackground("images/brickWall.jpg");
+    
+    .links {
+        background-color: rgba(250, 250, 250, 0.05);
+        padding: 0;
+
+        .github {
+            @include socialMediaBox;
+
+            &:hover {
+                @include setBackground("images/github.png");
+            }
+        }
+
+        .linkedin {
+            @include socialMediaBox;
+
+            &:hover {
+                @include setBackground("images/L_logo.png");
+            }
+        }
+
+        @media #{$sm} {
+            height: 50%;
+        }
+    }
+    
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        #labelContainer {
+            width: 80%;
+
+            h2 {
+                text-align: center;
+                color: #ffffff; 
+            }
+        }
+
+        #name, #email {
+            @include textInput;
+        }
+
+        #message {
+            @include textInput;
+            min-height: 5%;
+            max-height: 50%;
+            resize: vertical;
+            overflow: auto;
+        }
+        
+        #send {
+            width: 30%;
+            cursor: pointer;
+            border: 1px solid #ffffff;
+            background: transparent;
+            color: #ffffff;
+            transition-duration: 0.4s;
+
+            &:hover {
+                background: #212529;
+                border: 1px solid #212529;
+            }
+        }
+
+        @media #{$sm} {
+            height: 50%;
+        }
+    }
+
+    @media #{$sm} {
+        height: 2*$contentBoxHeight;
+    }
+}
